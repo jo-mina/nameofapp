@@ -2,26 +2,36 @@
 <html>
   <head>
     <title>Nameofapp</title>
-    <%= csrf_meta_tags %>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
   </head>
 
-  <body>
-  	<nav>
-  		<ul>
-  			<li>Home</li>
-  			<li>About</li>
-  			<li>Contact</li>
-  		</ul>	
-  	</nav>
+  <body class="body-top-padding">
+  	<nav class="navbar navbar-fixed-top">
+    	<div class="container-fluid">
+        	<div class="navbar-header">
+            	<div class="companyName">
+                	<p>Bikes Galore</p>
+            	</div>  
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+            	<li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>                                    
+                <li><a href="#contact">Contact</a></li>              
+            </ul>                    
+        </div>
+    </nav>
 
+ 
     <%= yield %>
-
-    <footer>
-    	&copy; 2017 Bike Berlin
-    </footer>
-  </body>
-
+ 
+	<footer  id="copyright-navbar">
+		<h5 id="copyright">&copy Bikes Galore 2017</h5>
+ 	</footer>
+ 	</body>
 </html>

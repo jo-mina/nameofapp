@@ -23,14 +23,32 @@ h1{
 /******** nav bar ********/
 
 .navbar{
-	background-color: #f2f2f2;	
+	background-color: #e6f3ff;	
+}
+
+.navbar-inverse .navbar-brand {
+    color: #23527c;
 }
 
 .companyName{
     text-transform: uppercase;
     color: #23527c;
-    padding: 10px 20px;
     font-weight: 900;
+    text-decoration: none;
+}
+
+
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #23527c;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #cce6ff;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #23527c;
 }
 
 /****** home page *******/
@@ -51,7 +69,7 @@ h1{
   	text-align: center;
  	margin: 0;
  	font-weight: 900;
- 	font-size: 5rem;
+ 	font-size: 3rem;
  	text-shadow: 0 3.5px 0 black;
  	text-transform: uppercase;
 }
@@ -74,6 +92,7 @@ h1{
 	color: #23527c;
 	float: center;
 	padding: 10px;
+
 }
 
 #copyright-navbar{	
@@ -82,7 +101,7 @@ h1{
 	bottom: 0px;
 	padding-left: 15px;
 	padding-right: 15px;
-	background-color: #f2f2f2;
+	background-color: #e6f3ff;
 }
 
 

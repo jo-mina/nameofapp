@@ -13,7 +13,7 @@
 
   <body class="body-top-padding">
   	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    	<div class="container-fluid">
+    	<div class="container-fluid nav-text">
         	<div class="navbar-header">
             	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             		<span class="sr-only">Toggle navigation</span>
@@ -22,14 +22,15 @@
             		<span class="icon-bar"></span>
             	</button>
             	<div class="companyName navbar-brand">
-            		<p>Bikes Galore</p>
+            		<a id="brand-name" href="/static_pages/index">Bikes Galore</a>
             	</div>
             </div>
             <div class="navbar-collapse collapse">
             	<ul class="nav navbar-nav navbar-right">
-            		<li><a href="#home">Home</a></li>
-                	<li><a href="#about">About</a></li>                                    
-                	<li><a href="#contact">Contact</a></li>              
+            		<li><a href="/static_pages/index">Home</a></li>
+            		<li><a href="/products">Products</a></li>
+                	<li><a href="/static_pages/about">About</a></li>                                    
+                	<li><a href="/static_pages/contact">Contact</a></li>              
             	</ul>
             </div>                    
         </div>
@@ -37,7 +38,6 @@
 
  
     <%= yield %>
- 
 	<footer  id="copyright-navbar">
 		<h5 id="copyright">&copy Bikes Galore 2017</h5>
  	</footer>

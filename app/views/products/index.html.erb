@@ -5,6 +5,8 @@
 
   <h1>Products</h1>
 
+  <%= link_to 'New Product', new_product_path %>
+
   <% @products.in_groups_of(4, false).each do |group| %>
     <div class="row">
       <% group.each do |product| %>
@@ -26,7 +28,5 @@
 <br>
 
 
-
-<%= link_to 'New Product', new_product_path %>
 
 

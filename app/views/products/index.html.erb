@@ -1,31 +1,32 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <h1>Products</h1>
 
+  <% @products.in_groups_of(4, false).each do |group| %>
+    <div class="row">
+      <% group.each do |product| %>
+        <div class = "col-sm-2 col-md-3">      
+          <%= image_tag(product.image_url, class: "img-responsive img-box")  %>
+          <div class="product-details-box">
+            <h4><%= product.name %></h4>
+            <h5><%= product.colour %></h5>
+            <h6><%= product.price %></h6>
+            <span class="detail"><%= link_to 'Show', product %></span>
+            <span class="detail"><%= link_to 'Edit', edit_product_path(product) %></span>
+            <span class="detail"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+          </div>
+        </div><!-- /column -->
+      <% end %>
+    </div><!-- /row -->
+  <% end %>
+</div><!-- /container -->
 <br>
 
+
+
 <%= link_to 'New Product', new_product_path %>
+
+

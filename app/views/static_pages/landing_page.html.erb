@@ -1,0 +1,11 @@
+<div class="container">
+	<div class="jumbotron">
+		<h1>
+			<div class="landing-page-caption">
+				<span> Featured Product</span><br>
+				<%= @featured_product.name %>
+			</div>
+		</h1>
+   		<%= image_tag(@featured_product.image_url, class: "img-responsive img-rounded")  %>
+  	</div>
+</div>

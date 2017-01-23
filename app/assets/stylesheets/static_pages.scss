@@ -76,26 +76,36 @@ h1{
 }
 
 
-/******* landing page *******/
+/******* landing page 
 
 .landing-page-caption {
 	font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
 	font-size: 3em;
-	color: black;
-    background-color: rgba(0, 0, 0, 0.3);
+	color: white;
+    background-color: rgba(0,0,0, 0.3);
     position: absolute;
-  	top: 0;
   	margin-left: auto;
   	margin-right: auto;
-  	width: 60%;
-  	max-height: 100px;
+  	margin-top: 10%;
+  	width: 40%;
+  	max-height: 20%;
+  	top: 0;
+  	font-weight: 700;
+  	padding: 15px;
+  	border-radius: 5px;
   
+}
+
+*******/
+.landing-page-caption{
+  	font-weight: 700;
 }
 
 .bike-carousel-img{
   width: auto;
-  height: 500px;
-  max-height: 500px;
+  height: 600px;
+  max-height: 600px;
+  bottom: 0;
 }
 
 

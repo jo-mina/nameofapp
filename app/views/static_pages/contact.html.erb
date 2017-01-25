@@ -5,22 +5,36 @@
 
 <%= flash[:notice] %>
 
-<%= form_tag("/static_pages/thank_you") do %>
-<div class="row">
-  <div class="col-md-4">
+<%= form_tag("/static_pages/thank_you", class: "contact-form form-horizontal") do %>
+
     <div class="form-group">
-      <%= label_tag :name %>
-      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+      <div class="col-sm-2 control-label">
+        <%= label_tag :name %>
+      </div>
+      <div class="col-sm-10">
+        <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+      </div>
     </div>      
     <div class="form-group">
-      <%= label_tag :email, "Email Address" %>
-      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+      <%= label_tag :email, "Email Address", class: "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+      </div>
     </div>
     <div class="form-group">
-      <%= label_tag :message %>
-      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+      <div class="col-sm-2 control-label">
+        <%= label_tag :message %>
+      </div>
+      <div class="col-sm-10">
+        <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+      </div>
     </div>      
-  </div>
-</div>
-<%= submit_tag "Send" %>   
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <%= submit_tag "Send", class:"btn btn-default" %>
+      </div>
+    </div>  
 <% end %>
+
+
+

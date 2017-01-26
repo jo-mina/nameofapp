@@ -26,7 +26,7 @@
             	</div>         	
             </div>
             <%= form_tag("/products", method: "get", class: "navbar-form navbar-left") do %>
-            <%= text_field_tag(:q, "Search", class: "form-control navbar-left")%>
+            <%= text_field_tag(:q, nil, class: "form-control navbar-left", placeholder: "Search")%>
             <%= submit_tag("Search", class: "btn btn-default")%>
             <% end %>
             <div class="navbar-collapse collapse">
@@ -34,12 +34,19 @@
             		<li><a href="/static_pages/landing_page">Home</a></li>
             		<li><a href="/products">Products</a></li>
                 	<li><a href="/static_pages/about">About</a></li>                                    
-                	<li><a href="/static_pages/contact">Contact</a></li>           
+                	<li><a href="/static_pages/contact">Contact</a></li> 
+                    <li>
+                        <% if user_signed_in? %>
+                        <%= link_to('Logout', destroy_user_session_path, :method => :delete)%>
+                        <% else %>
+                        <%= link_to('Login', new_user_session_path) %>
+                        <% end %>
+                    </li>         
             	</ul>
             </div>                    
         </div>
     </nav>
-
+    <p class="notice"><%= notice %></p>
  
     <%= yield %>
 	<footer  id="copyright-navbar">

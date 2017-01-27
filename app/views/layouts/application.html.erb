@@ -46,7 +46,12 @@
             </div>                    
         </div>
     </nav>
-    <p class="notice"><%= notice %></p>
+    <% if notice %>
+        <p id="notice" class="alert alert-success centre-text"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+        <p id="alert" class="alert alert-warning centre-text"><%= alert %></p>
+    <% end %>
  
     <%= yield %>
 	<footer  id="copyright-navbar">

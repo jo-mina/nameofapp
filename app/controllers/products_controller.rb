@@ -20,11 +20,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    if @product.highest_rating_comment.nil? || @product.lowest_rating_comment.nil? 
-      get products
-    else
-      @comments = @product.comments.order("created_at DESC")
-    end
+    @comments = @product.comments.order("created_at DESC")  
   end
 
   # GET /products/new

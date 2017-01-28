@@ -11,4 +11,9 @@ class Product < ApplicationRecord
   def lowest_rating_comment
   	comments.rating_asc.first
   end
+
+  #method to calculate the average rating on a product
+  def average_rating
+    comments.average(:rating).to_f
+  end
 end

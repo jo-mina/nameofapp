@@ -1,34 +1,48 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
-	<div class="col-sm-6 col-md-6">
-    	<div class="thumbnail">
-      		<%= image_tag(@product.image_url, class: "img-responsive")  %>
-      	</div>
+  <div class="col-sm-6 col-md-6">
+    <div class="thumbnail">
+      <%= image_tag(@product.image_url, class: "img-responsive")  %>
     </div>
-	<div class="col-sm-6 col-md-6">
-		<div class="caption">
-        	<p>
-  				<strong>Name:</strong>
-  				<%= @product.name %>
+  </div>
+  <div class="col-sm-6 col-md-6">
+    <div class="caption">
+      <p>
+  		  <strong>Name:</strong>
+  			<%= @product.name %>
 			</p>
 			<p>
-  				<strong>Description:</strong>
-  				<%= @product.description %>
+  			<strong>Description:</strong>
+  			<%= @product.description %>
 			</p>
 			<p>
-  				<strong>Colour:</strong>
-  				<%= @product.colour %>
+  			<strong>Colour:</strong>
+  			<%= @product.colour %>
 			</p>
 			<p>
-  				<strong>Price:</strong>
-  				<%= @product.price %>
+  			<strong>Price:</strong>
+  			<%= @product.price %>
 			</p>
-			<%= @product.highest_rating_comment %>
-			<%= @product.lowest_rating_comment %>
+			
 			<span class="btn btn-primary btn-colour-change" role="button"><%= link_to 'Edit', edit_product_path(@product) %></span>
 			<span class="btn btn-primary btn-colour-change" role="button"><%= link_to 'Back', products_path %></span>
-      	</div>
     </div>
- </div>
+  </div>       
+</div>
+<div class="row">
+  <div class="col-sm-6 col-md-6">
+    <%= render partial: "new_comment" %>
+  </div>
+  <div class="col-sm-6 col-md-6">
+    <p><%= @product.highest_rating_comment.body %></p>
+    <p><%= @product.lowest_rating_comment.body %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 col-md-6">
+    <%= render partial: "comments" %>
+  </div>
+</div>
+
 
 

@@ -1,10 +1,5 @@
 class CommentsController < ApplicationController
 
-	def page_comment
-		@comments = Comment.paginate(:page => params[:page], :per_page => 2)
-	end
-	
-
 	#action to create a new comment
 	def create
   		@product = Product.find(params[:product_id])
@@ -23,6 +18,10 @@ class CommentsController < ApplicationController
 
 	#action to delete an existing comment
 	def destroy
+		@comment = Comment.find(params[:id])
+		product = @comment.product
+		@comment.destroy
+		redirect_to product
 	end
 
 	#private actions

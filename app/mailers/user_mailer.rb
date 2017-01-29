@@ -3,7 +3,7 @@ class UserMailer < ApplicationMailer
 
 	def contact_form(email, name, message)
 	@message = message
-		mail(:from => email,
+		mail(:from => "noreply@bikesgalore.com",
 			:to => 'iclejo2k8@yahoo.co.uk',
 			:subject => "A new contact form from #{name}")
 	end

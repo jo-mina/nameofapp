@@ -61,3 +61,10 @@ gem 'cancancan', '~> 1.10'
 
 #Gem file for pagination. Split results into multiple pages
 gem 'will_paginate', '~> 3.1.1'
+
+#Gem for Rspec with rails - BDD frameowrk for testing
+group :development, :test do
+  gem 'rspec-rails', '~>3.5'
+end
+
+

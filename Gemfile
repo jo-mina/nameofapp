@@ -58,3 +58,6 @@ gem 'devise'
 
 #Provides authorisation functionality in rails
 gem 'cancancan', '~> 1.10'
+
+#Gem file for pagination. Split results into multiple pages
+gem 'will_paginate', '~> 3.1.1'

@@ -5,6 +5,10 @@
 
   <h1>Products</h1>
 
+  <div class="row">
+  	<%= will_paginate @products %>
+  </div>
+
   <%= render @products %>
 
   <%= link_to 'New Product', new_product_path %> 

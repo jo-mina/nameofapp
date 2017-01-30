@@ -71,4 +71,5 @@ end
 #  gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'master'
 #end
 
-
+#Gem for controller testing (functional)
+gem 'rails-controller-testing'

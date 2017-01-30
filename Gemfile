@@ -77,4 +77,7 @@ end
 #Gem for controller testing (functional)
 gem 'rails-controller-testing'
 
+#gem for stripe to allow payments to be transacted on your website
+gem 'stripe'
+
 

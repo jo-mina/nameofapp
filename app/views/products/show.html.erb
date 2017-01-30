@@ -26,6 +26,12 @@
         Average Rating:
           <p class="rated" data-score="<%= @product.average_rating%>"></p>
       </p>
+
+      <p>
+        <%= form_tag "/payments/create" do %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
+      </p>
 			
 			<span class="btn btn-primary btn-colour-change" role="button"><%= link_to 'Edit', edit_product_path(@product) %></span>
 			<span class="btn btn-primary btn-colour-change" role="button"><%= link_to 'Back', products_path %></span>

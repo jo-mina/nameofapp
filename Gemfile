@@ -29,13 +29,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
-end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
@@ -68,6 +62,8 @@ group :development, :test do
   gem 'rspec-rails', '~>3.5'
   #Gem for FactoryGirl 
   gem "factory_girl_rails", "~>4.0"
+    # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platform: :mri
 end
 
 #%w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|

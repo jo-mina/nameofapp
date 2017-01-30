@@ -62,9 +62,12 @@ gem 'cancancan', '~> 1.10'
 #Gem file for pagination. Split results into multiple pages
 gem 'will_paginate', '~> 3.1.1'
 
-#Gem for Rspec with rails - BDD frameowrk for testing
+#grouped gems for development and test environments
 group :development, :test do
+  #Gem for Rspec with rails - BDD frameowrk for testing
   gem 'rspec-rails', '~>3.5'
+  #Gem for FactoryGirl 
+  gem "factory_girl_rails", "~>4.0"
 end
 
 #%w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
@@ -73,3 +76,5 @@ end
 
 #Gem for controller testing (functional)
 gem 'rails-controller-testing'
+
+

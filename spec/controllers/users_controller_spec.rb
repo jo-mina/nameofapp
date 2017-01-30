@@ -2,7 +2,8 @@ require 'rails_helper'
 
 describe UsersController, :type => :controller do 
 	before do
-		@user = User.create!(email: "test@bikesgalores.com", password: "123456")
+		#used factory :user from user_factory.rb file
+		@user = FactoryGirl.create(:user)
 	end
 
 	describe 'GET #show' do

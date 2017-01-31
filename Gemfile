@@ -30,7 +30,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 
-
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
@@ -76,4 +75,5 @@ gem 'rails-controller-testing'
 #gem for stripe to allow payments to be transacted on your website
 gem 'stripe'
 
+gem 'brakeman'
 

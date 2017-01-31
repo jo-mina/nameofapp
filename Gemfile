@@ -75,5 +75,9 @@ gem 'rails-controller-testing'
 #gem for stripe to allow payments to be transacted on your website
 gem 'stripe'
 
+#checks for security vulnerabilities within your application
 gem 'brakeman'
+
+#Ruby memcache client
+gem 'dalli'
 

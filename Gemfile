@@ -81,3 +81,5 @@ gem 'brakeman'
 #Ruby memcache client
 gem 'dalli'
 
+#Redis in store memory database
+gem 'redis-rails'

@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  include ProductsHelper
   # GET /products
   # GET /products.json
   def index    
@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
         @products = Product.where("name LIKE ?", "%#{search_term}%").paginate(:page => params[:page], :per_page => 3)
       end
     else
-      @products = Product.all.paginate(:page => params[:page], :per_page => 3)
+    @products = Product.all.paginate(:page => params[:page], :per_page => 3)
     end
   end
 

@@ -83,3 +83,6 @@ gem 'dalli'
 
 #Redis in store memory database
 gem 'redis-rails'
+
+#middleware to display the speed badge of our page
+gem 'rack-mini-profiler'

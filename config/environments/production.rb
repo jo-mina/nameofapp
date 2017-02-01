@@ -112,12 +112,14 @@ Rails.application.configure do
     :domain => 'heroku.com',
     :enable_starttls_auto => true
     }
-  end
 
   #allows ActionCable requests on production
   config.web_socket_server_url = "wss://bikesgalore.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = ['https://bikesgalore.herokuapp.com', 'http://bikesgalore.herokuapp.com']
-
 end
+
+
+
+
 
  

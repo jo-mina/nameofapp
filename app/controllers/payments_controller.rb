@@ -17,8 +17,9 @@ class PaymentsController < ApplicationController
   				Order.create(
   				:product_id => @product_id,
   				:user_id => @user_id,
-  				:total => @total
+  				:total => @total,
   				)
+          UserMailer.payment_confirmation(@user).deliver_now
   			end
 
   		rescue Stripe::CardError => e
@@ -27,6 +28,6 @@ class PaymentsController < ApplicationController
     		err = body[:error]
     		flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}" 
   		end
-  		redirect_to product_path(@product)
+  		redirect_to static_pages_payment_confirmation_path
 	end
 end

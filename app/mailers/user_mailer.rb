@@ -7,4 +7,11 @@ class UserMailer < ApplicationMailer
 			:to => 'iclejo2k8@yahoo.co.uk',
 			:subject => "A new contact form from #{name}")
 	end
+
+	def payment_confirmation(user)
+		@user = user
+		mail(:to => user,
+			:from => "sales@bikesgalore.com",
+			:subject => "We Have Received Your Payment. Thank You.")
+	end
 end

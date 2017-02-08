@@ -10,7 +10,7 @@ class UserMailer < ApplicationMailer
 
 	def payment_confirmation(user)
 		@user = user
-		mail(:to => user,
+		mail(:to => user.email,
 			:from => "sales@bikesgalore.com",
 			:subject => "We Have Received Your Payment. Thank You.")
 	end

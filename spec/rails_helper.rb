@@ -60,4 +60,5 @@ RSpec.configure do |config|
 
   #Allows controller spec to work with devise in Rspec
   config.include Devise::Test::ControllerHelpers, :type => :controller
+
 end

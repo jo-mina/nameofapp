@@ -13,6 +13,14 @@ describe Product do
 	it "returns the average rating of all comments" do
 		expect(@product.average_rating).to eq 3
 	end
+
+	it "returns the highest rated comment" do
+		expect(@product.highest_rating_comment) == "Fantastic!"
+	end
+
+	it "returns the lowest rated comment" do
+		expect(@product.lowest_rating_comment) == "Awful bike!"
+	end
 	
 	context "is not valid" do
 		let(:product) { Product.new(description: "Nice bike") }

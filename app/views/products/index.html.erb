@@ -9,7 +9,9 @@
   	<% cache @products do %>
   		<%= render @products %>
   	<% end %>
-  <%= link_to 'New Product', new_product_path %> 
+  <% if current_user && current_user.admin? %>
+  <%= link_to 'New Product', new_product_path %>
+  <% end %>
 </div><!-- /container -->
 <br>
 
